@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- The switch statement is missing a case for "Apple". Add it, and set text to "How you like them apples?" -->
+<input id="myInput" type="text" value="">
+<button onclick="area()">Area</button>
+<button onclick="peri()">Perimeter</button>
+<p id="demo"></p>
+
+ <script>
+   
+function area() {
+ 
+  var  radii= document.getElementById("myInput").value;
+  var x= Math.PI*radii*radii;
+  document.getElementById("demo").innerHTML = x.toFixed(2);
+}
+function peri() {
+ 
+ var  radii= document.getElementById("myInput").value;
+ var y= 2*Math.PI*radii;
+ document.getElementById("demo").innerHTML = y.toFixed(2);
+}
+</script>
+</body>
+</html>

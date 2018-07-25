@@ -1,0 +1,105 @@
+//Problem:1
+
+var student={ name:"David", sclass:"VI", rollno:12}; 
+console.log(student.name);
+console.log(student.sclass); 
+console.log(student.rollno);
+
+//Problem:3
+
+var student={ name:"David", sclass:"VI", rollno:12};
+ var size=Object.keys(student).length; 
+console.log(size); 
+
+//Problem:4
+
+var library=[{author:'Bill Gates',	title:'The Road Ahead', readingstatus: true}, {author:'Steve Jobs',title:'Walter Isaacson', readingstatus:true},{author:'Suzane',title:'Mockingjay', readingstatus:false}]; var i; for(i=0;i<library.length;i++){ var book=library[i].title+'by'+library[i].author;
+if(library[i].readingstatus){console.log("Already Read:"+book)}
+else{console.log("Not yet read:"+book)}}
+
+//Problem:5
+function cylinder(height,dia){
+    this.height=height;
+    this.dia=dia;
+    var radius=this.dia/2;
+    var vol= this.height*Math.PI*radius*radius; return vol.toFixed(4);
+} var cyl=cylinder(7,4); console.log(cyl);
+
+//Problem:6
+
+function bubble(items){
+    var length=items.length;
+    for(var i=(length-1); i>=0;i--){
+        for(var j=(length-i);j>0;j--){
+            if(items[j]<items[j-1])
+            {
+                var temp=items[j];
+                items[j]=items[j-1];
+                items[j-1]=temp;
+            }
+        }
+    }
+} items=[6,4,0,3,-2,1]; bubble(items); console.log(items);
+
+//Problem:7
+
+function substring(item){
+    var subset=[];
+    for(var m=0; m<item.length; m++){
+        for(n=m+1; n<(item.length+1);n++){
+            subset.push(item.slice(m,n));
+        }
+    } return subset;} var item="dog"; var substr=substring(item); console.log(substr);
+
+//Problem:10
+var library = [ 
+   {
+       title:  'The Road Ahead',
+       author: 'Bill Gates',
+       libraryID: 1254
+   },
+   {
+       title: 'Walter Isaacson',
+       author: 'Steve Jobs',
+       libraryID: 4264
+   },
+   {
+       title: 'Mockingjay: The Final Book of The Hunger Games',
+       author: 'Suzanne Collins',
+       libraryID: 3245
+   }];   
+    function swap(arr,x,y){
+        var temp=arr[x];
+        arr[x]=arr[y];
+        arr[y]=temp;
+
+    }
+    function sort(arr)
+    {
+        var length=Object.keys(arr).length;
+        for(var i=0;i<length-1;i++)
+        {
+            for(j=0;j<length-i-1;j++)
+            {
+                if(arr[j].libraryID<arr[j+1].libraryID)
+                {
+                    swap(arr,j,j+1);
+                }
+            }
+        }
+        return arr;
+    } console.log(sort(library));
+
+//Problem:11
+function property(x){
+    return Object.getOwnPropertyNames(x);
+} console.log(property(Math)); 
+
+//Problem:14
+var obj={ a: "String", b: 42, c: false}; for(var i=0; i<Object.keys(obj).length; i++){ console.log( Object.keys(obj)[i] +","+Object.values(obj)[i]);}
+
+//Problem:15
+var obj={ a: "String", b: 42, c: false}; for(var i=0; i<Object.keys(obj).length; i++){ console.log( "["+Object.keys(obj)[i] +","+Object.values(obj)[i] + "]");}
+
+
+
